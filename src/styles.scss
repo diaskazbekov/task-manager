@@ -1,0 +1,107 @@
+@import 'reset-css/sass/reset';
+@import '@fontsource/montserrat';
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #161D31;
+  padding: 96px;
+
+  &.overflow-y-hidden {
+    overflow-y: hidden;
+  }
+}
+
+input, textarea, button {
+  border: none;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  cursor: pointer;
+}
+
+input[type="search"]::-webkit-search-decoration {
+  display: none;
+}
+
+input[type="search"] {
+  cursor: text;
+}
+
+.container {
+  max-width: 1242px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #283046;
+  border-radius: 8px;
+  border: 1px solid #3B4253;
+}
+
+.vertical-divider {
+  width: 1px;
+  height: auto;
+  background-color: #31394C;
+}
+
+.horizontal-divider {
+  height: 1px;
+  width: auto;
+  background-color: #31394C;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+  .input {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    label {
+      font-size: 12px;
+      line-height: 18px;
+      color: #B4B7BD;
+    }
+
+    input, textarea {
+      width: 100%;
+      min-height: 38px;
+      background-color: transparent;
+      font-size: 12px;
+      line-height: 24px;
+      color: #E0E0E0;
+      padding: 7px 14px;
+      border: 1px solid #3B4253;
+      border-radius: 5px;
+
+      &::placeholder {
+        color: #676D7D;
+      }
+
+      &.error {
+        color: #EB5757;
+        border-color: #EB5757;
+      }
+    }
+  }
+}

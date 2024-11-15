@@ -1,0 +1,5 @@
+<ng-container *ngIf="control['touched'] && control.invalid">
+  <span class="error" *ngIf="control.errors?.['required']">
+    Поле обязательно для заполнения
+  </span>
+</ng-container>
